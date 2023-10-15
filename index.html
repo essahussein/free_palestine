@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lets free palestine</title>
+    <link rel="icon" type="image/x-icon" href="./p.svg">
+    <style>
+        #myVideo {
+            width: auto;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -100;
+        }
+        .video_cont{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+        .btn_cont{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn_cont button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #15a81738;
+            border: none;
+            font-size: 20px;
+            padding: 11px 20px;
+            border-radius: 3px;
+            font-weight: bold;
+            border: 2px solid #0064005e;
+            color: #e1e1e1;
+        }
+        .btn_cont button:hover{
+            border-color: #7dff6870;
+        }
+        .btn_cont button img{
+            height: 25px;
+            width: auto;
+            margin-left: 7px;
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="video_cont" class="video_cont">
+        <video id="vid"  muted  id="myVideo">
+            <source src="./free.mp4" type="video/mp4">
+            Your browser does not support HTML video.
+        </video>
+    </div>
+    <div id="btn_cont" class="btn_cont">
+        <button id="btn">
+            <div>Free Palestine</div>
+            <img src="./p.svg" alt="flag">
+        </button>
+    </div>
+    <script>
+        var video_cont = document.getElementById('video_cont');
+        var vid = document.getElementById('vid');
+        var btn_cont = document.getElementById('btn_cont');
+        var btn = document.getElementById('btn');
+
+        btn.onclick = function (){
+            btn_cont.style.display = 'none';
+            video_cont.style.display = 'flex';
+            vid.play();
+        }
+
+    </script>
+</body>
+</html>
